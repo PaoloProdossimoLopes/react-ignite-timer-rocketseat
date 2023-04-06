@@ -1,27 +1,22 @@
-#  TITLE
-DESCRIPTION ...
+# 🖥 Ignite timer
+Pomodoro timer application using react for study
 
-## 🧰 Example:
-```swift
-```
-
-## ℹ️  GETTING STARTED
-### PREREQUISITES 
-- Swift 4+
-- Xcode 10+
+### PROTOTYPE
+You can see the figma design for this application [here](https://www.figma.com/file/DwEyYpHIC5HpQnA03z9Lul/Ignite-Timer-(Community)?node-id=0%3A1&t=9hSkR6bwMsK2SAkK-1).
 
 ### INSTALATION
 1. Open your terminal in location that you want save the project.
 2. Clone the repo in this local.
 ```sh
-git clone https://github.com/PaoloProdossimoLopes/repository-template.git
+git clone https://github.com/PaoloProdossimoLopes/react-ignite-timer-rocketseat.git
 ```
-3. Open the file with extension .xcodeproj inside the folder project.
+3. Open the directory react-ignite-timer-rocketseat.
    
 ### RUN
 So that you can run the project follow this steps:
-1. Choose a simulator 
-2. Then click on the **COMMAND + R** keys or press the ▶︎ (icon at the top of the IDE).
+1. Starts running the following command `npm i` to install the dependencies from package.json.
+2. Then run the command `npm run dev` to start application at localhost.
+3. Open the browser at url: `http://localhost:5173/`
 
 
 ## 📃 License:
