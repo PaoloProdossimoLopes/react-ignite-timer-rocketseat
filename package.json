@@ -6,7 +6,9 @@
   "scripts": {
     "dev": "vite",
     "build": "tsc && vite build",
-    "preview": "vite preview"
+    "preview": "vite preview",
+    "lint": "npx eslint src --ext .ts,.tsx",
+    "lint-all": "npx eslint src --ext .ts,.tsx --fix"
   },
   "dependencies": {
     "react": "^18.2.0",

@@ -1,4 +1,4 @@
-import { ButtonContainer, ButtonVariant } from "./Button.styles";
+import { ButtonContainer, ButtonVariant } from './Button.styles'
 
 interface Properties {
   title?: string
@@ -6,7 +6,5 @@ interface Properties {
 }
 
 export function Button({ title = 'Enviar', variant = 'primary' }: Properties) {
-  return <ButtonContainer
-    variant = { variant }
-  >{ title }</ButtonContainer>
+  return <ButtonContainer variant={variant}>{title}</ButtonContainer>
 }
