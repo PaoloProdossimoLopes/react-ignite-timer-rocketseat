@@ -7,6 +7,7 @@ You can see the figma design for this application [here](https://www.figma.com/f
 ### DEPENDENCIES
 - Vite
 - React
+- [React router DOM]()
 - ESLint ([Rocketseat config]()) *obs: needs to install vscode extension*
 - [Styled components](https://www.npmjs.com/package/styled-components)
 - Typescript
