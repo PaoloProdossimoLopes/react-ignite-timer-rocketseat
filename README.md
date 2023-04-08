@@ -12,6 +12,7 @@ You can see the figma design for this application [here](https://www.figma.com/f
 - [Styled components](https://www.npmjs.com/package/styled-components)
 - Typescript
 - Phosphor react
+- React Hook Form
 
 ## CONFIGURATIONS
 1. Install [ESlint](https://marketplace.visualstudio.com/items?itemName=dbaeumer.vscode-eslint) extension at IDE (VSCode)
