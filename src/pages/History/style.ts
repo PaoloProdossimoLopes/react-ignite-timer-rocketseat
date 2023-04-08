@@ -20,6 +20,9 @@ export const HistoryList = styled.div`
   table {
     width: 100%;
     border-collapse: collapse;
+    border-bottom-left-radius: 8px;
+    border-bottom-right-radius: 8px;
+    overflow: hidden;
     min-width: 600px;
 
     th {
