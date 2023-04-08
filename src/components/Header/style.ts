@@ -33,6 +33,7 @@ export const HeaderContainer = styled.header`
 
       &:focus {
         border: 0;
+        box-shadow: none;
       }
     }
   }
