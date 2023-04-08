@@ -11,6 +11,7 @@ You can see the figma design for this application [here](https://www.figma.com/f
 - ESLint ([Rocketseat config]()) *obs: needs to install vscode extension*
 - [Styled components](https://www.npmjs.com/package/styled-components)
 - Typescript
+- Phosphor react
 
 ## CONFIGURATIONS
 1. Install [ESlint](https://marketplace.visualstudio.com/items?itemName=dbaeumer.vscode-eslint) extension at IDE (VSCode)
