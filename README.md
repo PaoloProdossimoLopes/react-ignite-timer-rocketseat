@@ -13,6 +13,7 @@ You can see the figma design for this application [here](https://www.figma.com/f
 - Typescript
 - Phosphor react
 - React Hook Form
+- Zod
 
 ## CONFIGURATIONS
 1. Install [ESlint](https://marketplace.visualstudio.com/items?itemName=dbaeumer.vscode-eslint) extension at IDE (VSCode)
