@@ -9,16 +9,37 @@ import {
   TaskInput,
 } from './style'
 
+import { zodResolver } from '@hookform/resolvers/zod'
 import { useForm } from 'react-hook-form'
+import * as zod from 'zod'
+
+const newCycleFormValidationSchema = zod.object({
+  taskName: zod.string().min(1, 'Informe a tarefa'),
+  taskDuration: zod
+    .number()
+    .min(5, 'Informe uma duração que dure no minimo 5 minutos')
+    .max(60, 'Informe uma duração menor ou igual a 60 minutos'),
+})
+
+//                                \/---| referenciando uma variavel javascript no typescrypt
+type NewCycleFormData = zod.infer<typeof newCycleFormValidationSchema>
 
 export function Home() {
-  const { register, handleSubmit, watch } = useForm()
+  const { register, handleSubmit, watch, formState, reset } =
+    useForm<NewCycleFormData>({
+      resolver: zodResolver(newCycleFormValidationSchema),
+      defaultValues: { taskName: '', taskDuration: 0 },
+    })
 
   const taskName = watch('taskName')
   const taskDuration = watch('taskDuration')
   const isSubmitDisabled = !(taskName && taskDuration)
 
-  function handleCreateNewCycle(data: any) {}
+  console.log(`DEBUG: Erros -> ${formState.errors}`)
+
+  function handleCreateNewCycle(data: NewCycleFormData) {
+    reset()
+  }
 
   return (
     <HomeContainer>
