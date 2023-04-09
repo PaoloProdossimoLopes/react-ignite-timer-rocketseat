@@ -12,7 +12,7 @@ You can see the figma design for this application [here](https://www.figma.com/f
 - [Styled components](https://www.npmjs.com/package/styled-components)
 - Typescript
 - Phosphor react
-- React Hook Form
+- React Hook Form (+ Hook Form Resolvers)
 - Zod
 
 ## CONFIGURATIONS
