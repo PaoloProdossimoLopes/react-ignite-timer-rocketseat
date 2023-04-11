@@ -62,6 +62,10 @@ export const TaskInput = styled(BaseInput)`
 
 export const MinuteAmountInput = styled(BaseInput)`
   width: 4rem;
+
+  &:invalid {
+    border-color: ${(props) => props.theme['red-500']};
+  }
 `
 
 export const CountdownContainer = styled.div`

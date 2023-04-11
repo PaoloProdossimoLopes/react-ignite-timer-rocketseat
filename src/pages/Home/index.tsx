@@ -10,7 +10,8 @@ import {
 } from './style'
 
 import { zodResolver } from '@hookform/resolvers/zod'
-import { useState } from 'react'
+import { differenceInSeconds } from 'date-fns'
+import { useEffect, useState } from 'react'
 import { useForm } from 'react-hook-form'
 import * as zod from 'zod'
 
@@ -29,6 +30,7 @@ interface Cycle {
   id: string
   taskName: string
   taskDuration: number
+  startDate: Date
 }
 
 export function Home() {
@@ -55,10 +57,12 @@ export function Home() {
       id: newCycleID,
       taskName: data.taskName,
       taskDuration: data.taskDuration,
+      startDate: new Date(),
     }
 
     setCycles((state) => [...state, newCycle])
     setActiveID(newCycleID)
+    setSecondsPassed(0)
     reset()
   }
 
@@ -67,10 +71,31 @@ export function Home() {
   const currentCycleTimeAmount = activeCycle ? cycleSeconds - secondsPassed : 0
 
   const minutesRest = Math.floor(currentCycleTimeAmount / 60)
-  const secondsRest = minutesRest % 60
+  const secondsRest = currentCycleTimeAmount % 60
 
   const minutes = String(minutesRest).padStart(2, '0')
   const seconds = String(secondsRest).padStart(2, '0')
+
+  useEffect(() => {
+    if (activeCycle) {
+      document.title = `Ignite timer - ${minutes}:${seconds}`
+    }
+  }, [minutes, seconds])
+
+  useEffect(() => {
+    let interval: number
+
+    if (activeCycle) {
+      const oneSecond = 1000
+      interval = setInterval(() => {
+        setSecondsPassed(differenceInSeconds(new Date(), activeCycle.startDate))
+      }, oneSecond)
+    }
+
+    return () => {
+      clearInterval(interval)
+    }
+  }, [activeCycle])
 
   return (
     <HomeContainer>
