@@ -24,16 +24,10 @@ export const HeaderContainer = styled.header`
 
       &:hover {
         border-bottom: 3px solid ${(props) => props.theme['green-500']};
-        transition: 0.3s;
       }
 
       &.active {
         color: ${(props) => props.theme['green-500']};
-      }
-
-      &:focus {
-        border: 0;
-        box-shadow: none;
       }
     }
   }
